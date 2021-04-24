@@ -131,9 +131,7 @@ class _LoginState extends State<Login> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: _image == null
-                              ? null
-                              : Image.file(_image),
+                          child: _image == null ? null : Image.file(_image),
                         ),
                         Column(
                           children: [
@@ -233,7 +231,9 @@ class _LoginState extends State<Login> {
                             children: [
                               Text('Don\'t have an account??'),
                               FlatButton(
-                                  child: Text('Register'), onPressed: () {})
+                                child: Text('Register'),
+                                onPressed: () {},
+                              )
                             ],
                           ),
                         )

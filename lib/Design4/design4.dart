@@ -46,7 +46,7 @@ class _Design4State extends State<Design4> {
     final deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        color: Color.fromRGBO(5, 4, 4, 1),
+        color: Colors.black,
         height: deviceHeight,
         width: double.infinity,
         child: _widgetOptions.elementAt(_selectedIndex),

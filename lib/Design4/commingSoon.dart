@@ -122,6 +122,15 @@ class _CommingSoonState extends State<CommingSoon> {
                       ),
                     ),
                   ),
+                  Positioned(
+                    top: 30,
+                    right: 40,
+                    child: Icon(
+                      Icons.videocam_outlined,
+                      size: 35,
+                      color: Colors.white,
+                    ),
+                  )
                 ],
               ),
             ),
@@ -138,9 +147,10 @@ class _CommingSoonState extends State<CommingSoon> {
                           Text(
                             'Fisherman\'s Diary',
                             style: TextStyle(
-                                color: Colors.white60,
-                                fontSize: 27,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white70,
+                              fontSize: 27,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(
                             height: 10,
@@ -148,7 +158,7 @@ class _CommingSoonState extends State<CommingSoon> {
                           Text(
                             'Enah Johnscott',
                             style: TextStyle(
-                              color: Colors.white60,
+                              color: Colors.white70,
                               fontSize: 11,
                               fontWeight: FontWeight.w400,
                             ),
@@ -241,7 +251,7 @@ class _CommingSoonState extends State<CommingSoon> {
                           Text(
                             'Introduction',
                             style: TextStyle(
-                              color: Colors.white60,
+                              color: Colors.white70,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
@@ -251,15 +261,30 @@ class _CommingSoonState extends State<CommingSoon> {
                           ),
                           Container(
                             width: deviceWidth * 0.50,
-                            child: Text(
-                              'A 12-year-old girl fights to go to school in a village where female education is considered taboo.Ekah is determined to go to school in a village of fishermen where a girl child\'s education is considered a taboo. Her drive to break this old adage gets her embroiled with her father, Solomon\'s past.',
-                              style: TextStyle(
-                                color: Colors.white60,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w200,
-                              ),
+                            child: Stack(
+                              children: [
+                                Text(
+                                  'A 12-year-old girl fights to go to school in a village where female education is considered taboo.Ekah is determined to go to school in a village of fishermen where a girl child\'s education is considered a taboo. Her drive to break this old adage gets her embroiled with her father, Solomon\'s past.',
+                                  style: TextStyle(
+                                    color: Colors.white60,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w200,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 35,
+                                  child: Text(
+                                    'Read more...',
+                                    style: TextStyle(
+                                      color: Color.fromRGBO(255, 19, 4, 1),
+                                      fontSize: 12
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ],
@@ -297,18 +322,18 @@ class _CommingSoonState extends State<CommingSoon> {
                           ],
                         ),
                         Container(
-                          height: 80,
-                          margin: EdgeInsets.only(top: 63),
+                          height: 100,
+                          margin: EdgeInsets.only(top: 43),
                           width: double.infinity,
                           child: RotatedBox(
                             quarterTurns: 1,
                             child: Center(
                               child: Text(
-                                'BOOk NOW',
+                                'BOOK NOW',
                                 style: TextStyle(
-                                  color: Colors.white60,
-                                  fontWeight: FontWeight.bold
-                                ),
+                                    color: Colors.white60,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12),
                               ),
                             ),
                           ),
@@ -332,7 +357,117 @@ class _CommingSoonState extends State<CommingSoon> {
                   ),
                 )
               ],
-            )
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                left: 25,
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Cast',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                right: 20,
+                left: 20,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(
+                          'assets/images/nojan-namdar-dUtizJyby4E-unsplash.jpg',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Emilia',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 19, 4, .7),
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(
+                          'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Pearl',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 19, 4, .7),
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(
+                          'assets/images/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Princess',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 19, 4, .7),
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(
+                          'assets/images/sam-burriss-jTSf1xnsoCs-unsplash.jpg',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Stacy',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 19, 4, .7),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
