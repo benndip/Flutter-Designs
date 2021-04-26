@@ -6,6 +6,7 @@ import './Design1/camera.dart';
 import './Design2/design2.dart';
 import './Design3/design3.dart';
 import './Design4/design4.dart';
+import './Design5/design5.dart';
 
 void main() => runApp(MaterialApp(
       routes: {
@@ -19,13 +20,8 @@ void main() => runApp(MaterialApp(
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-      ),
-      child: Scaffold(
-        body: Login(),
-      ),
+    return Scaffold(
+      body: FindStation(),
     );
   }
 }
