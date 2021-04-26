@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './animation.dart';
+
 class TimeAndRevenue extends StatelessWidget {
   final String topText;
   final String bottomText;
@@ -22,13 +24,15 @@ class TimeAndRevenue extends StatelessWidget {
         children: [
           Text(topText),
           Container(
-              child: image == true
-                  ? Image.asset(
-                      'assets/images/download.png',
-                      width: 50,
-                      height: 50,
-                    )
-                  : null),
+            child: image == true
+                ? Image.asset(
+                    'assets/images/icons8-get-revenue-48.png',
+                    width: 80,
+                    height: 70,
+                    filterQuality: FilterQuality.high,
+                  )
+                : AnimationContainer(),
+          ),
           Text(bottomText),
         ],
       ),

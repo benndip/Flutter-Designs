@@ -7,6 +7,7 @@ import './Design2/design2.dart';
 import './Design3/design3.dart';
 import './Design4/design4.dart';
 import './Design5/design5.dart';
+import './Design6/design6.dart';
 
 void main() => runApp(MaterialApp(
       routes: {

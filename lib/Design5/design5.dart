@@ -1,3 +1,4 @@
+import 'package:Designs/Design5/animation.dart';
 import 'package:flutter/material.dart';
 
 import './stationCard.dart';
@@ -7,16 +8,12 @@ class FindStation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
     return SafeArea(
       child: SingleChildScrollView(
         child: Container(
           width: deviceWidth,
-          padding: EdgeInsets.only(left: 50, right: 50, top: 20),
+          padding: EdgeInsets.only(left: 40, right: 40, top: 20),
           child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.red, width: 1),
-            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -96,7 +93,7 @@ class FindStation extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10),
                   width: double.infinity,
-                  height: 100,
+                  height: 120,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(220, 221, 225, 1.0),
                     borderRadius: BorderRadius.circular(8),
@@ -107,11 +104,13 @@ class FindStation extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 20),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Container(
                               child: Row(
                                 children: [
+                                  AnimationContainer(),
+                                  SizedBox(width: 10),
                                   Text(
                                     '4:39',
                                     style: TextStyle(
