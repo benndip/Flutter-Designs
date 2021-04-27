@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './animation.dart';
+import 'countDownTimer.dart';
 
 class TimeAndRevenue extends StatelessWidget {
   final String topText;
@@ -31,9 +32,34 @@ class TimeAndRevenue extends StatelessWidget {
                     height: 70,
                     filterQuality: FilterQuality.high,
                   )
-                : AnimationContainer(),
+                : Stack(
+                    children: [
+                      AnimationContainer(),
+                      Positioned(
+                        top: 12.5,
+                        left: 13.5,
+                        child: Icon(
+                          Icons.access_time_sharp,
+                        ),
+                      )
+                    ],
+                  ),
           ),
-          Text(bottomText),
+          image == true
+              ? Text(bottomText)
+              : CountDownTimer(
+                  secondsRemaining: 25000,
+                  //  whenTimeExpires: () {
+                  //     setState(() {
+                  //       hasTimerStopped = true;
+                  //     });
+                  //   },
+                  countDownTimerStyle: TextStyle(
+                    color: Color(0XFFf5a623),
+                    fontSize: 17.0,
+                    height: 1.2,
+                  ),
+                ),
         ],
       ),
     );

@@ -79,7 +79,6 @@ class FindStation extends StatelessWidget {
                     children: [
                       TimeAndRevenue(
                         topText: 'Time',
-                        bottomText: '6hrs 14min',
                       ),
                       TimeAndRevenue(
                         topText: 'Revenue',
