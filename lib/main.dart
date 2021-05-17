@@ -8,6 +8,7 @@ import './Design3/design3.dart';
 import './Design4/design4.dart';
 import './Design5/design5.dart';
 import './Design6/design6.dart';
+import './Design7/Design7.dart';
 
 void main() => runApp(MaterialApp(
       routes: {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FindStation(),
+      body: Design7(),
     );
   }
 }
